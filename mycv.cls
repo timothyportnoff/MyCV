@@ -17,7 +17,7 @@
 %
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{mcv}[2024/10/29 MyCV Class]
+\ProvidesClass{mycv}[2024/10/29 MyCV Class]
 \NeedsTeXFormat{LaTeX2e}
 
 %                Class options

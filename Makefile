@@ -1,21 +1,22 @@
 .PHONY: src
 
 CC = xelatex
-SRC_DIR = src
-RESUME_DIR = src/resume
-CV_DIR = src/cv
-CL_DIR = src/cl
+SRC_DIR = .
+RESUME_DIR = resume
+CV_DIR = cv
+CL_DIR = cl
 RESUME_SRCS = $(shell find $(RESUME_DIR) -name '*.tex')
 CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
 CL_SRCS = $(shell find $(CL_DIR) -name '*.tex')
 
 src: $(foreach x, cl cv resume, $x.pdf)
 
+# This is for making a business card? Probably for email signature purposes only 
+# card.pdf: $(CARD_DIR)/card.tex $(CARD_SRCS)
+#      $(CC) -papersize=6in,4in -output-directory=$(CARD_DIR) $<
+
 resume.pdf: $(RESUME_DIR)/resume.tex $(RESUME_SRCS)
 	$(CC) -output-directory=$(RESUME_DIR) $<
-
-# card.pdf: $(CARD_DIR)/card.tex $(CARD_SRCS)
-# 	$(CC) -papersize=6in,4in -output-directory=$(CARD_DIR) $<
 
 cv.pdf: $(CV_DIR)/cv.tex $(CV_SRCS)
 	$(CC) -output-directory=$(CV_DIR) $<

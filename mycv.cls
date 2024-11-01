@@ -36,9 +36,12 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-
 %                3rd party packages
 %-------------------------------------------------------------------------------
+% These lines are used to supress all of the god damn console output xelatex outluts
+\usepackage{silence}
+\WarningsOff*
+
 % Needed to make fixed length table
 \RequirePackage{array}
 % Needed to handle list environment
@@ -145,7 +148,6 @@
 % Awesome section color
 \def\@sectioncolor#1#2#3{%
   \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
-}
 
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
@@ -154,7 +156,6 @@
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
 \newcommand*{\bodyfontlight}{\sourcesansprolight}
-
 
 %                Configuration for styles
 %-------------------------------------------------------------------------------
@@ -374,8 +375,6 @@
   \def\@letterenclosure{#2}
 }
 
-
-%-------------------------------------------------------------------------------
 %                Commands for extra
 %-------------------------------------------------------------------------------
 %% Define helper macros a user can change easily
@@ -393,8 +392,6 @@
 \newcommand{\acvSectionTopSkip}{3mm}
 \newcommand{\acvSectionContentTopSkip}{2.5mm}
 
-
-%-------------------------------------------------------------------------------
 %                Commands for utilities
 %-------------------------------------------------------------------------------
 % Use to align an element of tabular table
@@ -408,8 +405,6 @@
 % Use to execute conditional statements by checking empty string
 \newcommand*{\ifempty}[3]{\ifthenelse{\isempty{#1}}{#2}{#3}}
 
-
-%-------------------------------------------------------------------------------
 %                Commands for elements of CV structure
 %-------------------------------------------------------------------------------
 % Define a header for CV
@@ -714,7 +709,6 @@
 }
 
 
-%-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
 %-------------------------------------------------------------------------------
 % Define an environment for cvletter

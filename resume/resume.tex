@@ -1,0 +1,122 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/timothyportnoff/MyCV
+%
+% Author:
+% Timothy Portnoff <timothyportnoff@gmail.com>
+% http://www.timothyportnoff.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+% ????????
+%
+% Modified by:
+% Timothy Portnoff <timothyportnoff@gmail.com>
+% https://github.com/timothyportnoff/MyCV
+
+
+
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter, use a4paper for A4
+% A4 MIGHT***** Be a better size to use for online applications, whereas you can fir more information 
+% \documentclass[11pt, letterpaper]{awesome-cv}
+\documentclass[10pt, a4paper]{mycv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Include the multicol package to use two columns while maintaining layout and formatting
+\usepackage{multicol}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% \colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{3E6D9C}
+
+% These are the colors I'm using to apply for TEKsystems
+\definecolor{awesome}{HTML}{f7941e} % Orange
+% \definecolor{awesome}{HTML}{1191d0} % L Blue
+% \definecolor{awesome}{HTML}{002e57} % D blue
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Timothy J.}{Portnoff}
+% \position{Computer Science{\enskip\cdotp\enskip}Information Technology{\enskip\cdotp\enskip}Artificial Intelligence}
+% \position{Comp Sci{\enskip\cdotp\enskip}IT{\enskip\cdotp\enskip}AI{\enskip\cdotp\enskip}Graphics}
+% \position{Comp Sci{\enskip\cdotp\enskip}IT{\enskip\cdotp\enskip}AI}
+% \position{Information Technology Support Specialist}
+\position{IT Support Specialist}
+
+%I'm not REALLY in CO but there's more jobs there and I can fly there any time lol
+% \address{Fresno CA, United States}
+\address{Aurora CO, United States}
+\position{IT Support Specialist} 
+\mobile{(+1) 559-536-0231}
+\email{timothyportnoff@gmail.com}
+\github{timothyportnoff}
+\linkedin{timothyportnoff}
+% \dateofbirth{June 18th, 1999}
+% \homepage{www.timothyportnoff.com}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+% \quote{“There are some who call me… Tim?” - Tim the Enchanter, Monty Python and the Holy Grail 1975 }
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Timothy J. Portnoff~~~·~~~Résumé}
+  {\thepage}
+
+%	CV/RESUME CONTENT Each section is imported separately
+\sloppy
+\input{resume/summary.tex}
+\input{resume/skills.tex}
+\input{resume/experience.tex}
+\input{resume/education.tex}
+% \input{resume/certificates.tex}
+% \input{resume/projects.tex}
+% \input{resume/honors.tex}
+% \input{resume/presentation.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
+% \input{resume/extracurricular.tex}
+\end{document}

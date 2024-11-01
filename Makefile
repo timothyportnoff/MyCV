@@ -31,6 +31,9 @@ cv.pdf: $(CV_DIR)/cv.tex $(CV_SRCS)
 cl.pdf: $(CL_DIR)/cl.tex $(CL_SRCS)
 	$(CC) $(CC_FLAGS) -output-directory=$(CL_DIR) $<
 
+# contributions.tex: git_fetch.py
+# 	python3 git_fetch.py
+
 #.pdf, .tex, and .aux files will be regenerated automatically.
 clean:
 	rm -rf $(RESUME_DIR)/*.pdf  $(CV_DIR)/*.pdf  $(CL_DIR)/*.pdf  $(CARD_DIR)/*.pdf 

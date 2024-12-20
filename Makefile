@@ -20,7 +20,7 @@ CL_SRCS = $(shell find $(CL_DIR) -name '*.tex')
 src: $(foreach x, cl cv resume card, $x.pdf)
 
 card.pdf: $(CARD_DIR)/card.tex $(CARD_SRCS)
-	$(CC) $(CC_FLAGS) -papersize=6in,4in -output-directory=$(CARD_DIR) $<
+	$(CC) $(CC_FLAGS) -papersize=3.5in,2in -output-directory=$(CARD_DIR) $<
 
 resume.pdf: $(RESUME_DIR)/resume.tex $(RESUME_SRCS)
 	$(CC) $(CC_FLAGS) -output-directory=$(RESUME_DIR) $<
